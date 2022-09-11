@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Ago-2022 às 22:19
+-- Tempo de geração: 11-Set-2022 às 17:28
 -- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.0.13
+-- versão do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `bdlaravel`
+-- Banco de dados: `dblaravel-final`
 --
 
 -- --------------------------------------------------------
@@ -39,9 +39,9 @@ CREATE TABLE `tbcategoria` (
 --
 
 INSERT INTO `tbcategoria` (`idCategoria`, `nomeCategoria`, `created_at`, `updated_at`) VALUES
-(1, 'Calça', '2022-08-29 20:08:25', '2022-08-29 17:08:25'),
-(2, 'Camisa', '2022-08-29 20:08:25', '2022-08-29 17:08:25'),
-(3, 'Tênis', '2022-08-29 20:08:25', '2022-08-29 17:08:25');
+(1, 'Camisas', '2022-08-29 20:08:25', '2022-09-11 12:18:26'),
+(2, 'Bermudas', '2022-08-29 20:08:25', '2022-09-11 12:18:11'),
+(3, 'Botas', '0000-00-00 00:00:00', '2022-09-11 12:20:18');
 
 -- --------------------------------------------------------
 
@@ -125,9 +125,9 @@ CREATE TABLE `tbproduto` (
 --
 
 INSERT INTO `tbproduto` (`idProduto`, `idCategoria`, `nomeProduto`, `valorProduto`, `created_at`, `updated_at`) VALUES
-(1, 3, 'Tênis Popular', 100, '2022-08-29 20:08:35', '2022-08-29 17:08:35'),
-(2, 1, 'Calça Chique', 300, '2022-08-29 20:08:35', '2022-08-29 17:08:35'),
-(3, 2, 'Camisa do Rock', 400, '2022-08-29 20:08:35', '2022-08-29 17:08:35');
+(1, 3, 'Bota Coturno', 180, '2022-08-29 20:08:35', '2022-09-11 12:20:37'),
+(2, 2, 'Bermuda Praia', 80, '2022-08-29 20:08:35', '2022-09-11 12:19:00'),
+(3, 1, 'Camisa Santa Cruz', 120, '2022-08-29 20:08:35', '2022-09-11 12:19:06');
 
 --
 -- Índices para tabelas despejadas
@@ -169,7 +169,7 @@ ALTER TABLE `tbproduto`
 -- AUTO_INCREMENT de tabela `tbcategoria`
 --
 ALTER TABLE `tbcategoria`
-  MODIFY `idCategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idCategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `tbcliente`
